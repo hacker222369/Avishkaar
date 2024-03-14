@@ -28,8 +28,8 @@ digital wallets.
 ● Tailwind CSS </br>
 
 ## External libraries/APIs
-● ShadcnUI: Open-source components library. 
-● Auth0: Authentication and authorization platform for user management and authentication. 
+● ShadcnUI: Open-source components library.  </br>
+● Auth0: Authentication and authorization platform for user management and authentication.  </br>
 ● Stripe: Payment Processing Platform for Secure Online Transactions.
 </br>
 
