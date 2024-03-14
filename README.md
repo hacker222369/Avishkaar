@@ -17,9 +17,7 @@
 digital wallets. 
 * Orders can be tracked in real time </br>
 
-## Your Innovation 
-N/A
-</br>
+
 
 ## Tech Stack
 ● HTML, CSS, Javascript, Typescript </br>
@@ -28,6 +26,12 @@ N/A
 ● ReactJS </br>
 ● NodeJS </br>
 ● Tailwind CSS </br>
+
+## External libraries/APIs
+● ShadcnUI: Open-source components library. 
+● Auth0: Authentication and authorization platform for user management and authentication. 
+● Stripe: Payment Processing Platform for Secure Online Transactions.
+</br>
 
 
 
