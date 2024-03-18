@@ -5,25 +5,33 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input";
 import LoadingButton from "@/components/LoadingButton";
 import { Button } from "@/components/ui/button";
+import { User } from "@/types";
+import { useEffect } from "react";
 
 const formSchema = z.object({
   email: z.string().optional(),
   name: z.string().min(1, "Name is a mandatory field"),
-  room_number: z.string().min(1, "Room number is a mandatory field"),
+  room_number: z.coerce.number().min(1,"Please enter a valid Room Number"),
   hostel: z.string().min(1, "Hostel is a mandatory field"),
 });
 
 export type UserFormData = z.infer<typeof formSchema>;
 
 type Props = {
+  currentUser:User;
   onSave: (userProfileData: UserFormData) => void;
   isLoading: boolean;
 };
 
-const UserProfileForm = ({onSave,isLoading,}: Props) => {
+const UserProfileForm = ({onSave,isLoading,currentUser}: Props) => {
     const form=useForm<UserFormData>({
         resolver: zodResolver(formSchema),
+        defaultValues:currentUser,
     });
+    useEffect(() => {
+        form.reset(currentUser);
+      }, [currentUser, form]);
+    
     return(
         <Form{...form}>
         <form onSubmit={form.handleSubmit(onSave)} className="space-y-4 bg-red-50 rounded-lg md:p-10">

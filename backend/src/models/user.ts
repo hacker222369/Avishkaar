@@ -1,5 +1,6 @@
 import mongoose  from "mongoose";
 const userSchema=new mongoose.Schema({
+    
     auth0Id:{
         type:String,
         required:true,
@@ -12,7 +13,7 @@ const userSchema=new mongoose.Schema({
         type:String,
     },
     room_number:{
-        type:String,
+        type:Number,
     },
     hostel:{
         type:String,
